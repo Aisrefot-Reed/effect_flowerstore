@@ -29,7 +29,7 @@ export const shop = {
   categories: ["Цветочный магазин", "Магазин подарков и сувениров"],
   pricesUpdated: "16 июня",
   pricesSource: "карточка организации на Яндекс Картах",
-  logo: "/photos/logo.jpg",
+  logo: "photos/logo.jpg",
 } as const;
 
 export const features = [
@@ -74,7 +74,7 @@ export const products: Product[] = [
     description:
       "Розы пионовидные 3 шт, диантусы 5 шт, гвоздика кустовая 1 шт, гипсофила 1 шт. Упаковка — плёнка.",
     category: "bouquets",
-    image: "/photos/bouquet-roses.jpg",
+    image: "photos/bouquet-roses.jpg",
   },
   {
     id: "nenozhnost-2",
@@ -83,7 +83,7 @@ export const products: Product[] = [
     description:
       "Пионовидная роза 3 шт, диантус 2 шт, гвоздика кустовая 1 шт, гипсофила 1 шт, зелень 0,5 ветки. Упаковка — плёнка с тесьмой.",
     category: "bouquets",
-    image: "/photos/flowers-pink.jpg",
+    image: "photos/flowers-pink.jpg",
   },
   {
     id: "gypsophila",
@@ -92,7 +92,7 @@ export const products: Product[] = [
     description:
       "Гипсофила — долгостойкий цветок, переходящий в сухоцвет. 5 веток, ковыль 2 шт, бабочка 1 шт.",
     category: "bouquets",
-    image: "/photos/flowers-white.jpg",
+    image: "photos/flowers-white.jpg",
   },
   {
     id: "peonies",
@@ -100,7 +100,7 @@ export const products: Product[] = [
     price: 2150,
     description: "Пионы 7 штук, веточка гипсофилы, нежная упаковка.",
     category: "bouquets",
-    image: "/photos/interior-roses.jpg",
+    image: "photos/interior-roses.jpg",
   },
   {
     id: "lilies",
@@ -108,7 +108,7 @@ export const products: Product[] = [
     price: 900,
     description: "Веточка лилии и гипсофилы в светлой упаковке.",
     category: "bouquets",
-    image: "/photos/flowers-yellow.jpg",
+    image: "photos/flowers-yellow.jpg",
   },
   {
     id: "summer",
@@ -117,7 +117,7 @@ export const products: Product[] = [
     description:
       "Сумочка среднего размера, хризантема кеннеди 3 ветки, танацетум 2 ветки, зелень.",
     category: "bouquets",
-    image: "/photos/interior-bloom.jpg",
+    image: "photos/interior-bloom.jpg",
   },
   {
     id: "ny-bouquet",
@@ -126,7 +126,7 @@ export const products: Product[] = [
     description:
       "Букет из нобилиса, роз, декора хлопком и шишками в новогодней тематике.",
     category: "bouquets",
-    image: "/photos/interior-green.jpg",
+    image: "photos/interior-green.jpg",
   },
   {
     id: "round-balloon",
@@ -135,7 +135,7 @@ export const products: Product[] = [
     description:
       "Окружность около 1 м, высота 80 см–1 м. Живая и сухоцветная гипсофила, латексные шары разного дизайна, хром-шары. Надпись может быть любой.",
     category: "balloons",
-    image: "/photos/balloon-round.jpg",
+    image: "photos/balloon-round.jpg",
   },
   {
     id: "kraft-max",
@@ -144,7 +144,7 @@ export const products: Product[] = [
     description:
       "Высота 130 см. Изготовление с индивидуальной надписью. Шары можно заменить на любые.",
     category: "balloons",
-    image: "/photos/balloon-gold.jpg",
+    image: "photos/balloon-gold.jpg",
   },
   {
     id: "kraft",
@@ -155,7 +155,7 @@ export const products: Product[] = [
     description:
       "Крафт-букеты из воздушных шаров. Долго держат форму и напоминают о празднике.",
     category: "balloons",
-    image: "/photos/balloon-craft.jpg",
+    image: "photos/balloon-craft.jpg",
   },
   {
     id: "latex",
@@ -163,7 +163,7 @@ export const products: Product[] = [
     price: 150,
     description: "В стоимость входит шар, обработка, гелий и лента.",
     category: "balloons",
-    image: "/photos/balloon-white.jpg",
+    image: "photos/balloon-white.jpg",
   },
   {
     id: "chrome",
@@ -172,7 +172,7 @@ export const products: Product[] = [
     description:
       "Металлизированные шары: золото, серебро, тиффани, розовое золото, шампань.",
     category: "balloons",
-    image: "/photos/balloon-mix.jpg",
+    image: "photos/balloon-mix.jpg",
   },
   {
     id: "confetti",
@@ -181,7 +181,7 @@ export const products: Product[] = [
     description:
       "Шары с наполнением конфетти. Цвета: золото, серебро, розовое золото, тиффани, фуксия, фиолетовый, голубой, розовый и другие.",
     category: "balloons",
-    image: "/photos/balloon-stars.jpg",
+    image: "photos/balloon-stars.jpg",
   },
   {
     id: "numbers",
@@ -190,7 +190,7 @@ export const products: Product[] = [
     description:
       "Цифра 66 см, гелий и лента, декор. Цвета: золото, серебро, фуксия, синие, зелёные, чёрные.",
     category: "balloons",
-    image: "/photos/balloon-numbers.jpg",
+    image: "photos/balloon-numbers.jpg",
   },
   {
     id: "bubbles",
@@ -201,7 +201,7 @@ export const products: Product[] = [
     description:
       "Прозрачный шар-баблс. Можно наполнить конфетти, пенопластом, перьями, шарами или фатином.",
     category: "balloons",
-    image: "/photos/balloon-hearts.jpg",
+    image: "photos/balloon-hearts.jpg",
   },
   {
     id: "foil",
@@ -210,7 +210,7 @@ export const products: Product[] = [
     description:
       "Фольга 45 см однотонная: сердца, круги, звёзды. Можно украсить бантиками, горошком, бабочками.",
     category: "balloons",
-    image: "/photos/balloon-foil.jpg",
+    image: "photos/balloon-foil.jpg",
   },
   {
     id: "chamomile-foil",
@@ -218,7 +218,7 @@ export const products: Product[] = [
     price: 90,
     description: "Ромашка диаметром 15–17 см, разные цвета. Бант — отдельно 90 ₽.",
     category: "balloons",
-    image: "/photos/flower-single.jpg",
+    image: "photos/flower-single.jpg",
   },
   {
     id: "rose-foil",
@@ -226,7 +226,7 @@ export const products: Product[] = [
     price: 120,
     description: "Роза диаметром 20–22 см, разные цвета. Бант — 90 ₽.",
     category: "balloons",
-    image: "/photos/bouquet-balloons.jpg",
+    image: "photos/bouquet-balloons.jpg",
   },
   {
     id: "soap-bubbles",
@@ -235,7 +235,7 @@ export const products: Product[] = [
     description:
       "Композиция в шляпной коробке с мыльными розами люкс, хлопком, декоративными веточками и бабочкой. Шар-баблс с перьями и индивидуальной надписью.",
     category: "compositions",
-    image: "/photos/composition-box.jpg",
+    image: "photos/composition-box.jpg",
   },
   {
     id: "nobilis",
@@ -244,7 +244,7 @@ export const products: Product[] = [
     description:
       "Зимние композиции, букеты и штучные ветки нобилиса для праздника.",
     category: "compositions",
-    image: "/photos/interior-shelf.jpg",
+    image: "photos/interior-shelf.jpg",
   },
   {
     id: "kindergarten",
@@ -252,7 +252,7 @@ export const products: Product[] = [
     price: 15000,
     description: "Оформление мероприятий.",
     category: "events",
-    image: "/photos/balloon-blue.jpg",
+    image: "photos/balloon-blue.jpg",
   },
 ];
 
@@ -312,22 +312,22 @@ export type GalleryItem = {
 };
 
 export const gallery: GalleryItem[] = [
-  { src: "/photos/hero-storefront.jpg", alt: "Витрина магазина Эффект вечером" },
-  { src: "/photos/interior-fridge.jpg", alt: "Холодильник со свежими цветами" },
-  { src: "/photos/bouquet-roses.jpg", alt: "Букет розовых роз", tall: true },
-  { src: "/photos/balloon-round.jpg", alt: "Круглый букет из шаров" },
-  { src: "/photos/interior-wide.jpg", alt: "Торговый зал цветочного магазина" },
-  { src: "/photos/balloon-craft.jpg", alt: "Крафт-букет из шаров", tall: true },
-  { src: "/photos/interior-shop.jpg", alt: "Интерьер магазина Эффект" },
-  { src: "/photos/balloon-numbers.jpg", alt: "Цифры и фольгированные шары" },
-  { src: "/photos/interior-bloom.jpg", alt: "Букеты в витрине" },
-  { src: "/photos/composition-box.jpg", alt: "Цветочная композиция" },
-  { src: "/photos/balloon-foil.jpg", alt: "Фольгированные шары" },
-  { src: "/photos/flowers-pink.jpg", alt: "Розовые цветы", tall: true },
-  { src: "/photos/interior-counter.jpg", alt: "Прилавок магазина" },
-  { src: "/photos/balloon-mix.jpg", alt: "Букет из шаров с надписью", tall: true },
-  { src: "/photos/interior-pink.jpg", alt: "Ассортимент свежих цветов" },
-  { src: "/photos/storefront-day.jpg", alt: "Вывеска Эффект на улице Мира" },
+  { src: "photos/hero-storefront.jpg", alt: "Витрина магазина Эффект вечером" },
+  { src: "photos/interior-fridge.jpg", alt: "Холодильник со свежими цветами" },
+  { src: "photos/bouquet-roses.jpg", alt: "Букет розовых роз", tall: true },
+  { src: "photos/balloon-round.jpg", alt: "Круглый букет из шаров" },
+  { src: "photos/interior-wide.jpg", alt: "Торговый зал цветочного магазина" },
+  { src: "photos/balloon-craft.jpg", alt: "Крафт-букет из шаров", tall: true },
+  { src: "photos/interior-shop.jpg", alt: "Интерьер магазина Эффект" },
+  { src: "photos/balloon-numbers.jpg", alt: "Цифры и фольгированные шары" },
+  { src: "photos/interior-bloom.jpg", alt: "Букеты в витрине" },
+  { src: "photos/composition-box.jpg", alt: "Цветочная композиция" },
+  { src: "photos/balloon-foil.jpg", alt: "Фольгированные шары" },
+  { src: "photos/flowers-pink.jpg", alt: "Розовые цветы", tall: true },
+  { src: "photos/interior-counter.jpg", alt: "Прилавок магазина" },
+  { src: "photos/balloon-mix.jpg", alt: "Букет из шаров с надписью", tall: true },
+  { src: "photos/interior-pink.jpg", alt: "Ассортимент свежих цветов" },
+  { src: "photos/storefront-day.jpg", alt: "Вывеска Эффект на улице Мира" },
 ];
 
 export function telHref() {

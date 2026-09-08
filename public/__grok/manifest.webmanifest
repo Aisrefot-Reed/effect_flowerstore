@@ -1,0 +1,17 @@
+{
+  "name": "Эффект — цветы и шары в Тольятти",
+  "short_name": "Эффект",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#14110f",
+  "icons": [
+    {
+      "src": "__grok/icon-180.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

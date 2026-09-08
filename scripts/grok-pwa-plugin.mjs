@@ -153,6 +153,7 @@ function wrapHtmlResponses(middlewares, cwd) {
 
 export function grokPwaPlugin() {
   let root = process.cwd();
+  const isPages = process.env.DEPLOY_TARGET === "pages";
   return {
     name: "app-builder:grok-pwa",
     configResolved(config) {
@@ -166,6 +167,9 @@ export function grokPwaPlugin() {
       return `export const grokOgIdentity = ${JSON.stringify(snapshotOgIdentity(root))};`;
     },
     transformIndexHtml(html) {
+      // Static Pages export carries its own relative PWA head tags; skip the
+      // platform's absolute-path injection so the sub-path build stays clean.
+      if (isPages) return html;
       return injectGrokPwaHead(html, {
         host: process.env.VITE_PUBLIC_HOSTNAME ?? "",
         cwd: root,
@@ -175,10 +179,11 @@ export function grokPwaPlugin() {
       // Registered directly (not in a returned post-hook) so both run BEFORE
       // TanStack Start's SSR middleware, like the auth-popup plugin.
       serveGrokPwa(server.middlewares);
-      wrapHtmlResponses(server.middlewares, root);
+      if (!isPages) wrapHtmlResponses(server.middlewares, root);
     },
     configurePreviewServer(server) {
       serveGrokPwa(server.middlewares);
+      if (isPages) return () => {};
       // Post-hook: preview registers compression between the direct hooks and
       // the post-hooks, and the injector must wrap AFTER compression so it
       // sees plaintext HTML (compression then compresses the injected output).

@@ -1,4 +1,8 @@
-# Simple workflow for deploying static content to GitHub Pages
+# Static export to GitHub Pages.
+#
+# The app is a single-page static site (TanStack Start prerendered). This
+# workflow builds `dist/` with `npm run build:pages` (prerender + relative
+# assets so it works from the /effect_flowerstore/ sub-path) and deploys it.
 name: Deploy static content to Pages
 
 on:
@@ -15,8 +19,9 @@ permissions:
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+# Allow only one concurrent deployment, skipping runs queued between the run
+# in-progress and latest queued. However, do NOT cancel in-progress runs as we
+# want to allow these production deployments to complete.
 concurrency:
   group: "pages"
   cancel-in-progress: false
@@ -33,11 +38,24 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Build static Pages export
+        run: npm run build:pages
+        env:
+          # GitHub Pages project site lives at /<repo>/; keep the asset base in
+          # sync with the repo name so it survives renames.
+          PAGES_BASE: /${{ github.event.repository.name }}/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
-          path: '.'
+          # Upload the static build output only (prerendered HTML + assets)
+          path: 'dist/client'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5

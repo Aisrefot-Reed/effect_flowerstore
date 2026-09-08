@@ -13,7 +13,7 @@ export function SiteHero() {
   return (
     <section className="relative min-h-[86svh] overflow-hidden bg-night text-accent-fg">
       <img
-        src="/photos/hero-storefront.jpg"
+        src="photos/hero-storefront.jpg"
         alt="Витрина цветочного магазина Эффект на улице Мира"
         className="absolute inset-0 size-full object-cover object-[center_78%]"
       />
