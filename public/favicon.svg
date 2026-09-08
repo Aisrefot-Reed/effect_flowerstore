@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Эффект">
+  <rect width="32" height="32" rx="7" fill="#141210"/>
+  <rect x="2.25" y="2.25" width="27.5" height="27.5" rx="5.2" fill="none" stroke="#E8D5A3" stroke-width="1.15"/>
+  <!-- Stylized Э: reversed bowl + middle arm, gold, rose berry at the opening -->
+  <path fill="#E4C57A" d="M8.2 7.15
+    C21.8 7.15 26.35 10.7 26.35 16
+    C26.35 21.3 21.8 24.85 8.2 24.85
+    v-3.55
+    C19.4 21.3 22.55 19.35 22.55 16
+    C22.55 12.65 19.4 10.7 8.2 10.7
+    Z"/>
+  <rect x="8.35" y="14.25" width="14.2" height="3.5" fill="#E4C57A"/>
+  <circle cx="8.15" cy="16" r="2.05" fill="#8F3944"/>
+</svg>

@@ -1,0 +1,27 @@
+<!doctype html>
+<meta charset="utf-8">
+<style>
+  html, body { margin: 0; background: #888; }
+  .row { display: flex; gap: 16px; padding: 16px; align-items: center; background: #ddd; }
+  .cell { display: flex; flex-direction: column; align-items: center; gap: 6px; font: 11px/1 sans-serif; color: #333; }
+  .on-light { background: #f3eee6; padding: 8px; }
+  .on-dark { background: #171412; padding: 8px; }
+</style>
+<div class="row">
+  <div class="cell on-light">
+    <img id="i16" src="favicon.svg" width="16" height="16">
+    <span>16 light</span>
+  </div>
+  <div class="cell on-dark">
+    <img src="favicon.svg" width="16" height="16">
+    <span>16 dark</span>
+  </div>
+  <div class="cell on-light">
+    <img src="favicon.svg" width="32" height="32">
+    <span>32</span>
+  </div>
+  <div class="cell on-light">
+    <img src="favicon.svg" width="64" height="64">
+    <span>64</span>
+  </div>
+</div>

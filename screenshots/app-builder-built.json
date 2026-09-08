@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Эффект — цветы и шары в Тольятти",
+      "hasCanvas": false,
+      "bodyTextLen": 6066,
+      "bodyTextHash": "b8f6ae2cdd84bc36c80f6f8a4debba245a6b50181efab70b8d08bfcc330adc09",
+      "bodyTextPrefix": "Эффект ТОЛЬЯТТИ · МИРА, 95А Цены Фото Отзывы Контакты Telegram +",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Эффект — цветы и шары в Тольятти",
+      "hasCanvas": false,
+      "bodyTextLen": 6045,
+      "bodyTextHash": "2c57fa069ab7d447285636524cfb7b3dba1b779ccd5586c0742771a669445b1c",
+      "bodyTextPrefix": "Эффект ТОЛЬЯТТИ · МИРА, 95А Цены Фото Отзывы Контакты Позвонить ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": false,
+  "baselineReasons": []
+}
