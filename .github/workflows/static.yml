@@ -1,8 +1,13 @@
 # Static export to GitHub Pages.
 #
 # The app is a single-page static site (TanStack Start prerendered). This
-# workflow builds `dist/` with `npm run build:pages` (prerender + relative
-# assets so it works from the /effect_flowerstore/ sub-path) and deploys it.
+# workflow builds `dist/` with `npm run build:pages` (prerender + sub-path base
+# so it works from the /effect_flowerstore/ sub-path) and deploys it.
+#
+# IMPORTANT: GitHub Pages Source must be set to "GitHub Actions" in
+# Settings → Pages. If it's "Deploy from a branch", GitHub runs its own
+# `pages build and deployment` workflow that serves the branch root — which has
+# no index.html — and this site 404s regardless of this workflow's deploy.
 name: Deploy static content to Pages
 
 on:
@@ -56,6 +61,21 @@ jobs:
         with:
           # Upload the static build output only (prerendered HTML + assets)
           path: 'dist/client'
+      - name: Prune stale Pages artifacts
+        # deploy-pages deploys the newest uploaded "github-pages" artifact, but
+        # GitHub's own `pages build and deployment` (branch source) also uploads
+        # an artifact with the same name; delete all but the current run's so
+        # there is never ambiguity about which one gets deployed.
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CURRENT_RUN: ${{ github.run_id }}
+        run: |
+          IDs=$(gh api "/repos/${{ github.repository }}/actions/artifacts?name=github-pages" \
+            --jq ".artifacts[] | select(.workflow_run.id != $CURRENT_RUN) | .id")
+          for id in $IDs; do
+            gh api -X DELETE "/repos/${{ github.repository }}/actions/artifacts/$id" >/dev/null || true
+            echo "pruned artifact $id"
+          done
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
